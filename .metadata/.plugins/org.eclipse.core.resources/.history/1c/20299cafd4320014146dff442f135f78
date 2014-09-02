@@ -3,17 +3,6 @@ package com.interview;
 import java.util.ArrayList;
 import java.util.List;
 
-/* 
- * Theory:
- * 
- *    f(x) = 6 Xö3 + 2 Xö2 -X + 2
- *    
- *    f'(x) = 6.3 Xö2 + 2.2 X -1  (multiply exp * coef and sub 1 from exp)
- *    
- */
-
-
-
 public class Test {
 	public static List<Term>derivative(List<Term> terms){
 		List<Term> resp = new ArrayList<Term>();
