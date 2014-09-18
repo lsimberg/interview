@@ -1,0 +1,39 @@
+
+public class Test {
+	
+	public static String longestPalindrome(String str){
+		String longestPalind = "";
+		
+		if (str.isEmpty()) {
+			return null;
+		}
+	 
+		if (str.length() == 1) {
+			return str;
+		}
+		
+		longestPalind = str.substring(0, 1);
+		for (int i = 1; i < str.length(); i++){
+			String tmp = helper(str, i, i);
+			if (tmp.length() > longestPalind.length()) longestPalind = tmp;
+		}
+		
+		return longestPalind;
+	}
+	
+	private static String helper(String str, int begin, int end){
+		while(begin >= 0 && end <= str.length() - 1 && str.charAt(begin) == str.charAt(end)){
+			begin--;
+			end++;
+		}
+		return str.substring(begin + 1, end);
+	}
+	
+	public static void main(String[] args) {
+		String str = "a3banananab12321";
+		System.out.println("The longest palindrome for " + str + " is: " + longestPalindrome(str));
+		
+		
+	}
+
+}

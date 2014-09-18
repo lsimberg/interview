@@ -1,0 +1,43 @@
+package com.interview;
+
+import java.util.Arrays;
+
+/*
+ Remove Duplicates from Sorted Array II Total 
+ 
+ What if duplicates are allowed at most twice?
+
+ For example,
+   Given sorted array A = [1,1,1,2,2,3],
+
+   Your function should return length = 5, and A is now [1,1,2,2,3].
+
+  url: https://oj.leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
+
+ */
+
+
+
+
+public class Test {
+	public static int removeDuplicates(int[] nums){
+		if (nums.length < 3) return nums.length;
+		int cur = 2, pre = 1;
+		
+		while(cur < nums.length){
+			if (nums[cur] != nums[pre] || nums[cur] != nums[pre - 1]) pre++;
+			nums[pre] = nums[cur];
+			cur++;
+		}
+		
+		
+		return pre + 1;
+	}
+	
+	public static void main(String[] args) {
+		int[] nums = {1,1,1,2,2,3};
+		System.out.println("Num elem: " + removeDuplicates(nums) + "  - " + Arrays.toString(nums));
+		
+	}
+
+}

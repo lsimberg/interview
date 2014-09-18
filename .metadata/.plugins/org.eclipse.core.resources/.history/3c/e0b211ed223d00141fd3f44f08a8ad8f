@@ -1,0 +1,18 @@
+
+public class Test {
+	
+	public static String longestPalindrome(String str){
+		String longestPalind = "";
+		int size = 0;
+		
+		return longestPalind;
+	}
+	
+	public static void main(String[] args) {
+		String str = "banana";
+		System.out.println("The longest palindrome for " + str + " is: " + longestPalindrome(str));
+		
+		
+	}
+
+}
