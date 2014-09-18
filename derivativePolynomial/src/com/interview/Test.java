@@ -12,8 +12,6 @@ import java.util.List;
  *    
  */
 
-
-
 public class Test {
 	public static List<Term>derivative(List<Term> terms){
 		List<Term> resp = new ArrayList<Term>();
